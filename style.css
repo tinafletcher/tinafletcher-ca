@@ -1,0 +1,42 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+}
+
+h2 {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+}
+
+h3 {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+}
+
+h5 {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+}
+
+a {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+p {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+ul {
+    font-family: verdana;
+    font-size: 15px;
+}
