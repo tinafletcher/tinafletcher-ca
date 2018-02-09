@@ -2,6 +2,15 @@
 <link rel='stylesheet' href='style.css' type='text/css' media='screen' charset='utf-8'>
 <head>
     <title>Tina Fletcher - Writing</title>
+    <script>
+    function toggleVisibility(id){
+      var article = document.getElementById(id);
+      if(article.style.display == 'block')
+        article.style.display='none';
+      else
+        article.style.display='block';
+    }
+    </script>
 </head>
 <body>
     <h1>Writing</h1>
@@ -11,59 +20,70 @@
     <hr>
     <h5>February 8, 2018</h5>
     <h3>Things I learned while writing an article about things I learned</h3>
-    <p>Last year, I conducted a 12 month experiment related to implementing Code Stewardship at my organization. It went ok; I think I made some progress, and I think I learned some useful things. As a next step, I felt I had these options:</p>
-    <ol>
-      <li>Do nothing; maybe switch focus to some other initiative</li>
-      <li>Extend the experiment; i.e., continue working on it</li>
-      <li>Share what I'd learned; e.g. internal blog post, post on my web site, perhaps write a talk and submit to a conference somewhere</li>
-    </ol>
-    <p>I was having trouble deciding which one to choose. I procrastinated on making the decision for a month or so, but not deciding was bothering me. I felt like I was starting to default to Option 1, but if that's where things ended up I wanted it to be a conscious decision rather than just the path of least resistance.</p>
-    <p>I realized that I probably didn't have enough information to make the decision, which could be why I kept putting it off. For example, how could I decide between Option 1 and Option 2 if I didn't take time to think really critically about what impact my work was having? I decided to try Option 3, but to allow myself the potential outcome of not ever sharing what I wrote if it didn’t feel useful enough.</p>
-    <p><a href="Code Stewardship - Summary and Reflection.pdf" target="_blank">Here's the article I wrote.</a> (I did end up sharing it with several people at my organization.)</p>
-    <p>And here's what I learned while writing that article:</p>
-    <ul>
-      <li>Taking the time to retro on things I do, especially things I spent a lot of time on, just feels better. I think I prefer being sure that I haven't achieved something, over not being sure if I did. Closure is important.</li>
-      <li>Summarizing and reflecting is a great way to uncover things I've learned or taken away from an experience that I didn't realize I had. Exactly what I've learned is not always obvious.</li>
-      <li>If I do decide to share my reflections, other people will have really cool perspectives and thoughts about what I did that I may not have considered. Being really close to the work for a long time means it's hard to think about it in new ways.</li>
-    </ul>
-    <p>I better stop here. My manager says that if I think too hard about this, I might end up in an infinite loop.</p>
-    <p>...what did I learn while writing this article about things I learned while writing an article about things I learned...? :)</p>
-    <p><img src="heart.png" width=20 height=20>, TF</p>
+    <button type="button" onclick="toggleVisibility('Feb8')"><img src="expand.png" width=20 height=20></button>
+
+    <div id="Feb8" style="display:none">
+      <p>Last year, I conducted a 12 month experiment related to implementing Code Stewardship at my organization. It went ok; I think I made some progress, and I think I learned some useful things. As a next step, I felt I had these options:</p>
+      <ol>
+        <li>Do nothing; maybe switch focus to some other initiative</li>
+        <li>Extend the experiment; i.e., continue working on it</li>
+        <li>Share what I'd learned; e.g. internal blog post, post on my web site, perhaps write a talk and submit to a conference somewhere</li>
+      </ol>
+      <p>I was having trouble deciding which one to choose. I procrastinated on making the decision for a month or so, but not deciding was bothering me. I felt like I was starting to default to Option 1, but if that's where things ended up I wanted it to be a conscious decision rather than just the path of least resistance.</p>
+      <p>I realized that I probably didn't have enough information to make the decision, which could be why I kept putting it off. For example, how could I decide between Option 1 and Option 2 if I didn't take time to think really critically about what impact my work was having? I decided to try Option 3, but to allow myself the potential outcome of not ever sharing what I wrote if it didn’t feel useful enough.</p>
+      <p><a href="Code Stewardship - Summary and Reflection.pdf" target="_blank">Here's the article I wrote.</a> (I did end up sharing it with several people at my organization.)</p>
+      <p>And here's what I learned while writing that article:</p>
+      <ul>
+        <li>Taking the time to retro on things I do, especially things I spent a lot of time on, just feels better. I think I prefer being sure that I haven't achieved something, over not being sure if I did. Closure is important.</li>
+        <li>Summarizing and reflecting is a great way to uncover things I've learned or taken away from an experience that I didn't realize I had. Exactly what I've learned is not always obvious.</li>
+        <li>If I do decide to share my reflections, other people will have really cool perspectives and thoughts about what I did that I may not have considered. Being really close to the work for a long time means it's hard to think about it in new ways.</li>
+      </ul>
+      <p>I better stop here. My manager says that if I think too hard about this, I might end up in an infinite loop.</p>
+      <p>...what did I learn while writing this article about things I learned while writing an article about things I learned...? :)</p>
+      <p><img src="heart.png" width=20 height=20>, TF</p>
+    </div>
 
     <hr>
     <h5>January 29, 2018</h5>
     <h3>The power to react positively</h3>
-    <p>One night last week, I was leaving work. It was dark and rainy, and because the temperature was hovering around zero, it was also icy. I was waiting to cross the street to get to my parking lot.</p>
-    <p>The light changed. After checking that the intersection was clear, I started making my way across the street. It started raining harder, and the ground was slippery. I put up my hood and kept my gaze downwards, looking for icy patches.</p>
-    <p>Suddenly, despite looking at the ground, I noticed an increasingly bright light to my left. I looked up and was nearly blinded by a set of headlights just a few meters away. A car was making a left turn directly into my path, and was not slowing down.</p>
-    <p>The vehicle was close enough that I instinctually put my arms out in front of me in a "stop" gesture, as though that would help. At this point, the driver saw me and slammed on the brakes. Due to the ice on the road, the car continued to skid towards me. I managed to jump out of the way at the last moment.</p>
-    <p>This was a legitimately close call. But the moment I knew I was out of harm's way, this is the thought that popped into my head:</p>
-    <blockquote><p><i>"That must have been really scary for the driver."</i></p></blockquote>
-    <p>REALLY? I was almost just hit by a car while crossing the street at a green light. This was clearly an error on the part of the driver. What is wrong with me that my first thought is about how it must have been scary for THEM?</p>
-    <p>The thing is though, I have been that driver. When it's late, and it's dark, and it's raining, and I just spent 10 minutes in the cold scraping ice off my windows, and I'm trying to think about what we have in the house that I could make for dinner - it is not very hard to imagine accidentally missing the fact that a single person in a dark coat had started to cross the street.</p>
-    <p>I'm not a bad driver, and I'm not a bad person. But sometimes, I make mistakes, and so does everyone else. And if I had been that person, making that mistake, I would have been horrified and embarassed about coming so close to hitting a pedestrian who clearly had the right of way. Knowing that this kind of thing can easily happen to all of us, why would I bother getting upset?</p>
-    <p>Even if I'm wrong, and this driver was being reckless and irresponsible and didn't feel bad at all, there is still no reason why I should let them ruin my evening (or even the next 5 minutes) by getting upset about it. Here's a thing I read recently that sums up what I'm trying to say:</p>
-    <blockquote><p><i>"How you react is the only thing you can control. So, when bad stuff happens, you're in control. You determine the reaction which will determine how you feel. <b>Don't make yourself feel bad when you have the power to react positively and feel good."</b></i>(from <a href="https://medium.com/personal-growth/after-weeks-of-reading-tribe-of-mentors-heres-the-quick-lessons-you-can-learn-dde470325fe5" target="_blank">Tim Denning's summary of the book "Tribe of Mentors"</a>)</blockquote>
-    <p>This applies to so many things - things that happen at work, things that happen at home, things that happen in your town, things that happen across the world, things that you wish you'd done differently, things that you didn't have control over anyway. I choose to believe that the world is (for the most part) full of good people with good intentions, and it makes me a happier person because I don't feel personally attacked by the things that are happening around me.</p>
-    <p>On my way home after writing this post, someone left me a nice piece of evidence that I'm not crazy to believe this.</p>
-    <p><img src="Jan29-carmsg.jpg" width=390 height=390></p>
-    <p><i>("Watch Your Step -->", in reference to an ice patch that had formed next to my car and was now hidden by the fresh snow)</i></p>
-    <p><img src="heart.png" width=20 height=20>, TF</p>
+    <button type="button" onclick="toggleVisibility('Jan29')"><img src="expand.png" width=20 height=20></button>
 
-    <br>
+    <div id="Jan29" style="display:none">
+      <p>One night last week, I was leaving work. It was dark and rainy, and because the temperature was hovering around zero, it was also icy. I was waiting to cross the street to get to my parking lot.</p>
+      <p>The light changed. After checking that the intersection was clear, I started making my way across the street. It started raining harder, and the ground was slippery. I put up my hood and kept my gaze downwards, looking for icy patches.</p>
+      <p>Suddenly, despite looking at the ground, I noticed an increasingly bright light to my left. I looked up and was nearly blinded by a set of headlights just a few meters away. A car was making a left turn directly into my path, and was not slowing down.</p>
+      <p>The vehicle was close enough that I instinctually put my arms out in front of me in a "stop" gesture, as though that would help. At this point, the driver saw me and slammed on the brakes. Due to the ice on the road, the car continued to skid towards me. I managed to jump out of the way at the last moment.</p>
+      <p>This was a legitimately close call. But the moment I knew I was out of harm's way, this is the thought that popped into my head:</p>
+      <blockquote><p><i>"That must have been really scary for the driver."</i></p></blockquote>
+      <p>REALLY? I was almost just hit by a car while crossing the street at a green light. This was clearly an error on the part of the driver. What is wrong with me that my first thought is about how it must have been scary for THEM?</p>
+      <p>The thing is though, I have been that driver. When it's late, and it's dark, and it's raining, and I just spent 10 minutes in the cold scraping ice off my windows, and I'm trying to think about what we have in the house that I could make for dinner - it is not very hard to imagine accidentally missing the fact that a single person in a dark coat had started to cross the street.</p>
+      <p>I'm not a bad driver, and I'm not a bad person. But sometimes, I make mistakes, and so does everyone else. And if I had been that person, making that mistake, I would have been horrified and embarassed about coming so close to hitting a pedestrian who clearly had the right of way. Knowing that this kind of thing can easily happen to all of us, why would I bother getting upset?</p>
+      <p>Even if I'm wrong, and this driver was being reckless and irresponsible and didn't feel bad at all, there is still no reason why I should let them ruin my evening (or even the next 5 minutes) by getting upset about it. Here's a thing I read recently that sums up what I'm trying to say:</p>
+      <blockquote><p><i>"How you react is the only thing you can control. So, when bad stuff happens, you're in control. You determine the reaction which will determine how you feel. <b>Don't make yourself feel bad when you have the power to react positively and feel good."</b></i>(from <a href="https://medium.com/personal-growth/after-weeks-of-reading-tribe-of-mentors-heres-the-quick-lessons-you-can-learn-dde470325fe5" target="_blank">Tim Denning's summary of the book "Tribe of Mentors"</a>)</blockquote>
+      <p>This applies to so many things - things that happen at work, things that happen at home, things that happen in your town, things that happen across the world, things that you wish you'd done differently, things that you didn't have control over anyway. I choose to believe that the world is (for the most part) full of good people with good intentions, and it makes me a happier person because I don't feel personally attacked by the things that are happening around me.</p>
+      <p>On my way home after writing this post, someone left me a nice piece of evidence that I'm not crazy to believe this.</p>
+      <p><img src="Jan29-carmsg.jpg" width=390 height=390></p>
+      <p><i>("Watch Your Step -->", in reference to an ice patch that had formed next to my car and was now hidden by the fresh snow)</i></p>
+      <p><img src="heart.png" width=20 height=20>, TF</p>
+    </div>
+
     <hr>
     <h5>January 25, 2018</h5>
     <h3>It's not for you, it's for me.</h3>
-    <p>I'm making this web site because I want to:</p>
-    <ul>
-        <li>Have a place where I can share slides from my talks</li>
-        <li>Practice writing</li>
-        <li>Document/observe how my learning and interests change over time</li>
-        <li>Practice working with technology I don't normally get around to playing with</li>
-    </ul>
-    <p>If others can also benefit from what I post here, that's even better! But it's not required.</p>
-    <p>I think this will be important for me to remember. If I don't post here unless I am certain that others will benefit from what I'm saying, I'll probably never write anything :)  </p>
-    <p><img src="heart.png" width=20 height=20>, TF</p>
+    <button type="button" onclick="toggleVisibility('Jan25')"><img src="expand.png" width=20 height=20></button>
+
+    <div id="Jan25" style="display:none">
+      <p>I'm making this web site because I want to:</p>
+      <ul>
+          <li>Have a place where I can share slides from my talks</li>
+          <li>Practice writing</li>
+          <li>Document/observe how my learning and interests change over time</li>
+          <li>Practice working with technology I don't normally get around to playing with</li>
+      </ul>
+      <p>If others can also benefit from what I post here, that's even better! But it's not required.</p>
+      <p>I think this will be important for me to remember. If I don't post here unless I am certain that others will benefit from what I'm saying, I'll probably never write anything :)  </p>
+      <p><img src="heart.png" width=20 height=20>, TF</p>
+    </div>
 
 </body>
 </html>
