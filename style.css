@@ -1,8 +1,8 @@
 body {
-    background-color: lightblue;
+    background-color: darkcyan;
 }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
     font-family: verdana;
     color: white;
     text-align: left;
@@ -16,16 +16,19 @@ a {
 p {
     font-family: verdana;
     font-size: 15px;
+    font-weight: bold;
 }
 
 ul {
     font-family: verdana;
     font-size: 15px;
+    font-weight: bold;
 }
 
 ol {
     font-family: verdana;
     font-size: 15px;
+    font-weight: bold;
 }
 
 ul.menu{
@@ -67,13 +70,13 @@ li a.active{
 
 div.gallery {
     margin: 5px;
-    border: 1px solid #333;
+    border: 2px solid white;
     float: left;
     width: 180px;
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 2px solid #333;
 }
 
 div.gallery img {
@@ -86,4 +89,5 @@ div.desc {
     text-align: center;
     font-family: verdana;
     font-size: 12px;
+    color: white;
 }
