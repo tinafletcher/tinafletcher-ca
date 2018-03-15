@@ -13,22 +13,23 @@ a {
     font-size: 15px;
 }
 
-p {
+p, figcaption {
     font-family: verdana;
     font-size: 15px;
-    font-weight: bold;
 }
 
 ul {
     font-family: verdana;
     font-size: 15px;
     font-weight: bold;
+    color: white;
 }
 
 ol {
     font-family: verdana;
     font-size: 15px;
     font-weight: bold;
+    color: white;
 }
 
 ul.menu{
@@ -90,4 +91,31 @@ div.desc {
     font-family: verdana;
     font-size: 12px;
     color: white;
+}
+
+div.column {
+    float: left;
+    width: 30%;
+    font-family: verdana;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    border: 2px solid white;
+    padding: 15px;
+    background-color: darkgrey;
+}
+
+div.column h3 {
+    text-align: center;
+    color: black;
+}
+
+@media (max-width: 600px){
+  div.column {
+      width: 90%;
+  }
+  div.column img {
+      max-width: 100%;
+      height: auto;
+  }
 }
