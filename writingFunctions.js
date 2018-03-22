@@ -1,3 +1,4 @@
+/* not used anymore */
 function toggleVisibility(id){
   var article = document.getElementById(id);
   if(article.style.display == 'block')
