@@ -11,3 +11,8 @@ function updateBlogwindow(id, location){
   var selectedArticle = document.getElementById(id).innerHTML;
   document.getElementById(location).innerHTML = selectedArticle;
 }
+
+function populateDefault(id, location){
+  var defaultArticle = document.getElementById(id).innerHTML;
+  document.getElementById(location).innerHTML = defaultArticle;
+}
