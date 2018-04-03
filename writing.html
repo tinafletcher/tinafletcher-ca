@@ -18,7 +18,7 @@
     </script>
 
 </head>
-<body onload="populateDefault('Mar29','mainWindow')">
+<body onload="populateDefault('Apr3','mainWindow')">
     <ul class="menu">
       <li class="menu"><a class="menu" href=index.html>Home</a></li>
       <li class="menu"><a class="menu" href=speaking.html>Speaking</a></li>
@@ -30,11 +30,29 @@
     <br><br>
 
     <div class="blogwindow" id="mainWindow">
-      <h3>MARCH 29, 2018</h3>
-      <h2>But, that's easy for me</h2>
+      <h3>APRIL 3, 2018</h3>
+      <h2>Why I Prefer Good Testing Over Excellent Testing – Part 1</h2>
     </div>
 
     <div class="articlelist">
+      <h5>APRIL 3, 2018</h5>
+      <h3>Why I Prefer Good Testing Over Excellent Testing – Part 1</h3>
+      <button type="button" onclick="updateBlogwindow('Apr3','mainWindow')"><img src="expand.png" width=20 height=20></button>
+      <div id="Apr3" style="display:none">
+        <h3>APRIL 3, 2018</h3>
+        <h2>Why I Prefer Good Testing Over Excellent Testing – Part 1</h2>
+        <p>I gave a 15 minute talk on this topic at <a href="https://starcon.io" target="_blank">StarCon</a> in January 2018. While I enjoyed the challenge of fitting everything I wanted to say into 15 minutes (I'm not usually great at being concise), I know I could have gone into a lot more detail on some of the information if I had more time. Therefore, I've also submitted this as a full-length topic to <a href="https://pnsqc.org" target="_blank">PNSQC</a>, which takes place later this year. The neat thing about this conference is that they also require a peer-reviewed paper to accompany each presentation. So I've decided to do a series of blog posts that elaborate on the information in my original 15 minute talk. Having some material prepared in advance would be useful if I do end up needing to write a formal paper, but I also just wanted to spend some more time thinking about the topic anyway.</p>
+        <p>So here's part 1!</p>
+        <h4>Why is this topic interesting / relevant?</h4>
+        <p>Although I'm currently a Software Development Manager, until recently I've mostly been in test-focused roles throughout the rest of my career. I used to think that if only we had more time for testing, we'd eventually find all of the important issues. But I started noticing that most escaped defects I could remember were things I never would have found, or couldn't have prevented anyway. So, while I believe good testing will always be important, instead of investing in truly excellent testing I'd rather assume things WILL go wrong and be well prepared to handle failure.</p>
+        <h4>What is the difference between Good and Excellent testing?</h4>
+        <p>To me, excellent testing is thinking of as many test cases as you can, trying your best to run them all, and continuing to test until you run out of time. Good testing, on the other hand, still involves thinking of as many test cases as you can, but choosing to run only the ones that will give you the most information about how well your product is working. Then, spend your remaining time planning for how you'll detect and resolve failures that you weren't able to anticipate.</p>
+        <h4>What are the other blog posts in this series going to cover?</h4>
+        <p>To illustrate how I became convinced that good testing is better than excellent testing, I'll share some stories about things that have happened to me lately. These will include defects I've missed that I wouldn't have found with all the time in the world, and cases where I have been saved by solid monitoring and roll-back strategies. I'll also share ideas for how to get started with planning for good testing, and preparing for failure detection and handling. Finally, I'll provide some comments on what I think all of this means for testers, for developers, and for how to approach software development in general.</p>
+        <p><img src="heart.png" width=20 height=20>, TF</p>
+      </div>
+      <hr>
+
       <h5>MARCH 29, 2018</h5>
       <h3>But, that's easy for me</h3>
       <button type="button" onclick="updateBlogwindow('Mar29','mainWindow')"><img src="expand.png" width=20 height=20></button>
@@ -44,7 +62,7 @@
         <p>A thing I'm trying to get better at is accepting praise for doing something that felt easy to me.</p>
         <p>My whole life, people have told me that I'm extremely well organized. I've always struggled to recognize this as a legitimate talent. I don't feel like I've ever invested time in trying to be "good" at organizing things, or learning effective strategies for doing so. To me it just feels like "doing things properly", in ways that feel natural and easy.</p>
         <p>However, this kind of thing definitely doesn't come naturally to everyone. It took me a while to realize this. Sometimes, I still catch myself being disappointed by others when insufficient planning or organization leads them to forget things, to not meet commitments, or to miss opportunities. This isn't necessarily fair, though. When I think about things I am terrible at (such as attempting to use my absolutely abysmal sense of direction to find my way to a new location), I know I can still be terrible at these things even if I am actually putting a lot of effort into trying to be better. I also really appreciate when people who are stronger in those areas respectfully give me a hand (such as when my husband nicely reminds me which way to turn on a route he knows I have driven many times before). I need to keep this in mind, and not assume that someone who is failing at organization isn't trying, or doesn't care.</p>
-        <p>So even though it feels better accepting praise for something I did that was actually really hard for me, I think it's still ok to feel good about leveraging my natural talents. Lately, if someone tells me that they appreciated some planning work I did, instead of awkwardly saying something like "it wasn't a big deal", I am trying to genuinely thank them and share some of the thought process that went into what I did. Maybe I'll say something that helps them next time they are facing something that could benefit from a more organized approach. At the very least, I'm showing better appreciation for the fact that they went out of their way to give me positive feedback, even if I am hearing a voice in the back of my head saying I didn't totally earn it.</p>
+        <p>So even though it feels better accepting praise for something I did that was actually really hard for me, I think it's still ok to feel good about leveraging my natural talents. Lately, if someone tells me that they appreciated some planning work I did, instead of awkwardly saying something like "it wasn't a big deal", I am trying to genuinely thank them and share some of the thought process that went into my work. Maybe I'll say something that helps them next time they are facing a problem that could benefit from a more organized approach. At the very least, I'm showing better appreciation for the fact that they went out of their way to give me positive feedback, even if I am hearing a voice in the back of my head saying I didn't totally earn it.</p>
         <p>What things are you naturally good at that other people find really valuable?</p>
         <p><img src="heart.png" width=20 height=20>, TF</p>
       </div>
