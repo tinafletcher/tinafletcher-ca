@@ -1,0 +1,149 @@
+body {
+    background-color: OliveDrab;
+}
+
+h1, h2, h3, h4 {
+    font-family: verdana;
+    color: white;
+    text-align: left;
+}
+
+h5 {
+    font-family: verdana;
+    color: black;
+    text-align: left;
+}
+
+a {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+p, figcaption {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+ul {
+    font-family: verdana;
+    font-size: 15px;
+    color: black;
+}
+
+ol {
+    font-family: verdana;
+    font-size: 15px;
+    color: black;
+}
+
+ul.menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.menu{
+  float: left;
+}
+
+li a.menu{
+  display: block;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a.menu:hover{
+  background-color: dimgrey;
+}
+
+li a.active{
+  display: block;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: darkgrey;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 2px solid white;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 2px solid #333;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 12px;
+    color: white;
+}
+
+div.column {
+    float: left;
+    width: 30%;
+    font-family: verdana;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    border: 2px solid white;
+    padding: 15px;
+    background-color: darkgrey;
+}
+
+div.column h3 {
+    text-align: center;
+    color: black;
+}
+
+div.blogwindow {
+    float: left;
+    font-family: verdana;
+    font-size: 15px;
+    color: black;
+    margin: 5px;
+    border: 2px solid white;
+    padding: 15px;
+    background-color: darkgrey;
+}
+
+div.articlelist {
+    float: right;
+    width: 30%;
+    font-family: verdana;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    border: 2px solid white;
+    padding: 15px;
+    background-color: darkgrey;
+}
+
+
+@media (max-width: 600px){
+  div.column {
+      width: 90%;
+  }
+  div.column img {
+      max-width: 100%;
+      height: auto;
+  }
+}
