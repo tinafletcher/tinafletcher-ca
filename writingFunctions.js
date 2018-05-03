@@ -12,7 +12,12 @@ function updateBlogwindow(id, location){
   document.getElementById(location).innerHTML = selectedArticle;
 }
 
-function populateDefault(id, location){
-  var defaultArticle = document.getElementById(id).innerHTML;
-  document.getElementById(location).innerHTML = defaultArticle;
+function populateDefault(location){
+  var theiframe = "<iframe src='Apr3-Article.html' width=69% height=600 frameborder='0' scrolling=no></iframe>";
+  document.getElementById(location).innerHTML = theiframe;
+}
+
+function resizeIframe(iframe){
+  iframe.height = "";
+  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 }

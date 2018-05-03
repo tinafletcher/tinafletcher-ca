@@ -116,17 +116,22 @@ div.column h3 {
 
 div.blogwindow {
     float: left;
+    width: 64%;
+    padding: 15px;
+}
+
+div.article{
+    background-color: darkgrey;
     font-family: verdana;
     font-size: 15px;
     color: black;
     margin: 5px;
-    border: 2px solid white;
     padding: 15px;
-    background-color: darkgrey;
+    border: 2px solid white;
 }
 
 div.articlelist {
-    float: right;
+    float: left;
     width: 30%;
     font-family: verdana;
     font-size: 15px;
