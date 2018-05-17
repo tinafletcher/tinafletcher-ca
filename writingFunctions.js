@@ -5,7 +5,7 @@
     article.style.display='none';
   else
     article.style.display='block';
-}*/
+}
 
 function updateBlogwindow(id, location){
   var selectedArticle = document.getElementById(id).innerHTML;
@@ -20,4 +20,4 @@ function populateDefault(location){
 function resizeIframe(iframe){
   iframe.height = "";
   iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
+}*/

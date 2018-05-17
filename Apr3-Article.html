@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style_new.css">
+<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,17 @@
 
 </head>
 <body>
+  <script type="text/javascript">
+    if (top !== self){ //in an iframe
+      //don't display the menu
+    }
+    else{ //not in an iframe
+      //display menu, in the case where someone is viewing an article in its own window
+      document.write("<ul class='menu'><li class='menu'><a class='menu' href=index.html>Home</a></li><li class='menu'><a class='menu' href=speaking.html>Speaking</a></li><li class='menu'><a class='menu' href=writing.html>Writing</a></li><li class='menu'><a class='menu' href=reading.html>Reading</a></li><li class='menu'><a class='menu' href=doing.html>Doing</a></li><li class='menu'><a class='menu' href=about.html>About</a></li></ul>");
+    }
+  </script>
   <div class="article">
-      <h3>APRIL 3, 2018</h3>
+      <h5>APRIL 3, 2018</h5>
       <h2>Why I Prefer Good Testing Over Excellent Testing – Part 1</h2>
       <p>I gave a 15 minute talk on this topic at <a href="https://starcon.io" target="_blank">StarCon</a> in January 2018. While I enjoyed the challenge of fitting everything I wanted to say into 15 minutes (I'm not usually great at being concise), I know I could have gone into a lot more detail on some of the information if I had more time. Therefore, I've also submitted this as a full-length topic to <a href="https://pnsqc.org" target="_blank">PNSQC</a>, which takes place later this year. The neat thing about this conference is that they also require a peer-reviewed paper to accompany each presentation. So I've decided to do a series of blog posts that elaborate on the information in my original 15 minute talk. Having some material prepared in advance would be useful if I do end up needing to write a formal paper, but I also just wanted to spend some more time thinking about the topic anyway.</p>
       <p>So here's part 1!</p>

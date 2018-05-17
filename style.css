@@ -142,6 +142,19 @@ div.articlelist {
     background-color: darkgrey;
 }
 
+div.articlelist a {
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+hr {
+  color: black;
+  background: black;
+  height: 1px;
+}
+
 
 @media (max-width: 600px){
   div.column {
