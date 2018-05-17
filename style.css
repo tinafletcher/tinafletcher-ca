@@ -130,6 +130,10 @@ div.article{
     border: 2px solid white;
 }
 
+div.article h3{
+    color: black;
+}
+
 div.articlelist {
     float: left;
     width: 30%;
@@ -140,6 +144,19 @@ div.articlelist {
     border: 2px solid white;
     padding: 15px;
     background-color: darkgrey;
+}
+
+div.articlelist a {
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+hr {
+  color: black;
+  background: black;
+  height: 1px;
 }
 
 
