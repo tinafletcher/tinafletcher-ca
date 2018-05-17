@@ -130,10 +130,6 @@ div.article{
     border: 2px solid white;
 }
 
-div.article h3{
-    color: black;
-}
-
 div.articlelist {
     float: left;
     width: 30%;
