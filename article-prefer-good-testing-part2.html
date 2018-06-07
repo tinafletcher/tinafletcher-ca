@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/images/favicon.png" rel="icon">
+    <title>Why I Prefer Good Testing Over Excellent Testing - Part 2</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114624248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114624248-1');
+    </script>
+
+</head>
+<body>
+  <script type="text/javascript">
+    if (top !== self){ //in an iframe
+      //don't display the menu
+    }
+    else{ //not in an iframe
+      //display menu, in the case where someone is viewing an article in its own window
+      document.write("<ul class='menu'><li class='menu'><a class='menu' href=index.html>Home</a></li><li class='menu'><a class='menu' href=speaking.html>Speaking</a></li><li class='menu'><a class='menu' href=writing.html>Writing</a></li><li class='menu'><a class='menu' href=reading.html>Reading</a></li><li class='menu'><a class='menu' href=doing.html>Doing</a></li><li class='menu'><a class='menu' href=about.html>About</a></li></ul>");
+    }
+  </script>
+  <div class="article">
+      <h5>MAY 3, 2018</h5>
+      <h2>Why I Prefer Good Testing Over Excellent Testing – Part 2</h2>
+      <p>This is the second article in a series that expands on a short talk I gave called "Why I Prefer Good Testing Over Excellent Testing".</p>
+      <h4>Defects I wouldn't have found with all the time in the world</h4>
+      <p>I want to share some stories about bugs I've I missed that helped to solidify my belief that trying to find "everything" is not actually useful. In each case, while I felt bad about missing them, I also knew that even if I had infinite time available, I probably still wouldn't have discovered them.</p>
+      <p>For some extra context, I work for a company called D2L, and we make a product called Brightspace (an online learning platform). The stories in this series of blog posts are about my work on developing features for Brightspace.</p>
+      <h4>Story 1: Monitoring user REALLY loves the Home Pages tool</h4>
+      <p>My team was building a report to help school administrators understand which tools within the learning platform are being used most often by their students and teachers. Each time a user visits a tool, an event is recorded that indicates which tool was visited. The report we made is a visual representation of the aggregated event data. Here's an example of what we'd expect the report to look like.</p>
+      <figure>
+        <img src="resources/images/Tool Usage - Expected.png" alt="Pie chart with various slice sizes">
+        <figcaption><i>Fig.1: Typical Example of Expected Appearance for the Tool Usage Report.</i></figcaption>
+      </figure>
+      <p>We did a lot of testing for this report.</p>
+      <p>We tested the appearance of the graph. What if there are a really large number or a really small number of tools available? What if there are really long or really short tool names? What if the tool names contain special characters, or appear in other languages? Does the graph look ok in all the browsers we support? What about on phones and tablets? Can the graph be understood by someone using a screen reader?</p>
+      <p>We tested the event flow. How long does it take from the time an event is sent to the time it is reflected in the report? Are all of the appropriate events fired even when the system is under heavy load? What if the same user visits the same tool many times in quick succession? Is an event fired if a tool is accessed via API rather than through the UI? Will events get queued and re-sent if the event processing system is temporarily down or not responding? What kind of event is sent when someone is using the learning platform's impersonation functionality? What happens if an event is sent that is malformed in some way?</p>
+      <p>We tested data retrieval functionality. What is displayed if no data is available, or data cannot be retrieved? What if the retrieved data arrives in an unexpected format? Is retrieval of the data appropriately restricted to users that have permissions to view this report? Does data retrieval time increase for very large data sets? Does data retrieval time increase if a large number of users are viewing the report at the same time?</p>
+      <p>After covering all of the areas mentioned here (plus many more!), we felt pretty good about the reliability, accuracy, and usability of this report. However, almost immediately after we released it, we started getting calls from clients saying that the information in the report seemed incorrect. They sent us screenshots of what the reports looked like on their end, and we were forced to admit that there did seem to be a problem. Almost the entire pie chart was taken up with one giant slice that represented the Home Pages tool. It seemed highly unlikely that this one tool was being accessed orders of magnitude more frequently than all other tools, and that this could be the case across multiple clients.</p>
+      <figure>
+        <img src="resources/images/Tool Usage - Actual.png" alt="Pie chart with one very large slice, and many very tiny slices">
+        <figcaption><i>Fig. 2: Actual Appearance of Tool Usage Report in Production.</i></figcaption>
+      </figure>
+      <p>But how could this be? Based on our extensive testing, we were very confident in the event flow, data retrieval, and display functionality of our report.</p>
+      <p>As we began to dig in to the issue, we learned something very interesting. It turns out that each instance of our learning platform has a special "monitoring" user configured. As part of a series of ongoing automated site stability tests run by our Network Operations Center, this user visits the Home Pages tool once every 5 minutes. No wonder the Home Pages tool slice in the pie chart was so disproportionately large compared to all the others! We fixed the issue by having the report exclude data from these automated users.</p>
+      <p>Once the update was successfully shipped to production, I started to reflect on how we could have missed such a significant issue, despite having been so careful in our test planning. Monitoring users don't exist in any of our test environments, and until that point I had no idea they existed in production either. Therefore, I had no chance of ever connecting the dots that automated monitoring activity could show up in our report, and hinder its accuracy and usefulness. Even if I did know about the concept of monitoring users, I'm still not entirely sure I would have made that connection, or thought to test for it.</p>
+      <h4>Lesson Learned: You don't know what you don't know</h4>
+      <p>It might sound obvious, but sometimes it's easy to forget. And you certainly won't be testing for things you're unaware of, no matter how much time you have.</p>
+      <p><img src="resources/images/heart.png" width=20 height=20>, TF</p>
+  </div>
+
+</body>
+</html>
