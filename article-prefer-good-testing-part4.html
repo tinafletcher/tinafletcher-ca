@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/images/favicon.png" rel="icon">
+    <title>Why I Prefer Good Testing Over Excellent Testing - Part 3</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114624248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114624248-1');
+    </script>
+
+</head>
+<body>
+  <script type="text/javascript">
+    if (top !== self){ //in an iframe
+      //don't display the menu
+    }
+    else{ //not in an iframe
+      //display menu, in the case where someone is viewing an article in its own window
+      document.write("<ul class='menu'><li class='menu'><a class='menu' href=index.html>Home</a></li><li class='menu'><a class='menu' href=speaking.html>Speaking</a></li><li class='menu'><a class='menu' href=writing.html>Writing</a></li><li class='menu'><a class='menu' href=reading.html>Reading</a></li><li class='menu'><a class='menu' href=doing.html>Doing</a></li><li class='menu'><a class='menu' href=about.html>About</a></li></ul>");
+    }
+  </script>
+  <div class="article">
+      <h5>JUNE 14, 2018</h5>
+      <h2>Why I Prefer Good Testing Over Excellent Testing – Part 4</h2>
+      <p>This is the fourth article in a series that expands on a short talk I gave called "Why I Prefer Good Testing Over Excellent Testing".</p>
+      <h4>Defects I wouldn't have found with all the time in the world</h4>
+      <p>Last time, I shared a story about how a random/unintentional port closure impacted the deployment of a new service. Of course, all of our tests had passed the day before, when the port was open like it was supposed to be.<p>
+      <p>Here's one final story about a failure that we consciously decided NOT to test for in advance.</p>
+      <h4>Story 3: Yeah, but S3 will never go down</h4>
+      <p>In this story, my team was building a product that relied heavily on Amazon's Simple Storage Service (S3). S3 has a long track record of extremely high availability. Its ease of use and low cost have also contributed to making it a very popular option amongst all kinds of web developers. Therefore, a significant proportion of web sites and web apps available today are using S3 in at least some capacity.</p>
+      <figure>
+        <img src="resources/images/Amazon S3.png" alt="Logo for Amazon's Simple Storage Service (S3)">
+        <figcaption><i>Fig. 4: S3; an object-based storage service offered by Amazon Web Services</i></figcaption>
+      </figure>
+      <p>S3's proven record of high availability, as well as its ubiquitousness, led us to feel comfortable NOT prioritizing any work related to building and testing contingency plans for how our app would behave if the service ever were to become unavailable. Instead, we decided to invest more time in testing and hardening things that we felt posed larger risks to our product, such as security and performance.</p>
+      <p>On February 28, 2017, Amazon S3 went down for multiple hours. During that time, our users were simply unable to use most of the functionality in our application. There was nothing we could do about it, except hope that Amazon was able to get S3 back up and running soon.</p>
+      <figure>
+        <img src="resources/images/S3 Outage.png" alt="News headlines about S3 outage">
+        <figcaption><i>Fig. 5: Seems like ours was not the only application without a good backup plan for an S3 outage.</i></figcaption>
+      </figure>
+      <p>No matter how thoroughly you've tested your application or service, if one of your dependencies is down and you don't have a backup plan, your users might still be out of luck. In this case, we knew we depended on S3 and had consciously decided not to prioritize a failover mechanism, but it's also very possible to be impacted by a dependency you were not even aware of. In these cases, you could unintentionally end up without sufficient failure handling.</p>
+      <h4>Lesson Learned: Things that are out of your control can impact you. (And nothing is invincible.)</h4>
+      <p>The big takeaway here is a reminder that you can't always fully control the uptime (or performance, security, or other dimensions) of your product. While it may not always make sense to invest in detailed contingency plans for every possible scenario, it's probably worth at least understanding the state your product will be in if any of your known dependencies are unavailable or malfunctioning. Knowing this will help you to make more informed prioritization decisions.</p>
+      <p>And of course, nothing will "never go down". Not even Amazon S3.</p>
+      <p><img src="resources/images/heart.png" width=20 height=20>, TF</p>
+  </div>
+
+</body>
+</html>
