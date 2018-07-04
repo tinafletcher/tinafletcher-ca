@@ -133,6 +133,8 @@ div.article{
 div.articlelist {
     float: left;
     width: 30%;
+    height: 775px;
+    overflow: scroll;
     font-family: verdana;
     font-size: 15px;
     color: white;
