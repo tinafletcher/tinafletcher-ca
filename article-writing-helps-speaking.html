@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/images/favicon.png" rel="icon">
+    <title>But, that's easy for me</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114624248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114624248-1');
+    </script>
+
+</head>
+<body>
+  <script type="text/javascript">
+    if (top !== self){ //in an iframe
+      //don't display the menu
+    }
+    else{ //not in an iframe
+      //display menu, in the case where someone is viewing an article in its own window
+      document.write("<ul class='menu'><li class='menu'><a class='menu' href=index.html>Home</a></li><li class='menu'><a class='menu' href=speaking.html>Speaking</a></li><li class='menu'><a class='menu' href=writing.html>Writing</a></li><li class='menu'><a class='menu' href=reading.html>Reading</a></li><li class='menu'><a class='menu' href=doing.html>Doing</a></li><li class='menu'><a class='menu' href=about.html>About</a></li></ul>");
+    }
+  </script>
+  <div class="article">
+      <h5>AUGUST 15, 2018</h5>
+      <h2>Writing helps speaking (and other updates!) </h2>
+      <p>I'm taking a quick break from the "Why I Prefer Good Testing Over Excellent Testing" series of articles... I have a few other things I wanted to write down first before I finish up the last few of those.</p>
+      <p>First of all, I finally got the chance to present a longer version of that talk! I was asked to come and speak at an internal conference/summit being held at Oracle NetSuite. I was really happy to have an opportunity to do so, since it turns out that I won't be going to PNSQC, or writing a formal technical paper. (I was actually accepted for the conference, but traveling to Portland in October may have been a bit challenging due to proximity to Baby Fletcher's due date). I had a fantastic experience at Oracle NetSuite and felt my talk went very well!</p>
+      <figure>
+              <img src="resources/images/oracle tweet.png" alt="Tweet expressing my appreciation for being invited to speak at Oracle NetSuite">
+              <figcaption><i>Always on the lookout for an opportunity to let people know about my web site!</i></figcaption>
+      </figure>
+      <p>Part of the reason the talk seemed successful was how comfortable I felt while presenting it, despite only having given a much shorter version of it one time, 8 months ago. I think the main reason for this is having taken the time to write a series of blog posts on the topic over the past several months. Somehow, writing out the same content in article format helped me to think about and process it slightly differently than I had while designing slides and preparing the initial version of the talk. So when it came to speaking it out loud, I had a stronger foundation of familiarity and experience with the material that gave me greater confidence.</p>
+      <p>So I have a few takeaways from this experience:</p>
+      <ul>
+      <li>Writing out ideas in blog articles can be a good strategy to help me prepare for presentations</li>
+      <li>It's neat that although I chose to focus more on blog writing than on speaking this year (thinking that it would help me develop "different" skills), it turned out that blog writing might actually become a speaking preparation strategy for me going forwards</li>
+      </ul>
+      <br>
+      <p>I also wanted to share what's been going on in lately in terms of features and tech in my web site (since it hasn't changed much visually in a while):</p>
+      <ul>
+      <li><b>Improving developer experience:</b> I'm looking into ways to make it easier to enter new blog posts. Right now I just literally write out the HTML, and although my layouts are simple, it's annoying. I feel like I might contribute articles more frequently if it were less annoying to do so.</li>
+      <li><b>Adding user interaction:</b> I'm also investigating how I might implement functionality such as the ability to like and comment on my articles, photos, and reading list.</li>
+      <li><b>Learning new tech:</b> I'm experimenting with programming an <a href="https://aws.amazon.com/iotbutton/" target="_blank">AWS IoT Button</a>. I am thinking of using it to start tracking some data about when and how often I'm reading. Once I have that data, there will be opportunities to process and display it that will lead to learning more new tech.</li>
+      </ul>
+      <p>Ok, that's all for now! Stay tuned for the final few "Why I Prefer Good Testing" articles, to finish off the series.</p>
+      <p><img src="resources/images/heart.png" width=20 height=20>, TF</p>
+  </div>
+</body>
+</html>
