@@ -78,6 +78,7 @@ div.gallery {
     border: 2px solid white;
     float: left;
     width: 180px;
+    height: 200px;
 }
 
 div.gallery:hover {
