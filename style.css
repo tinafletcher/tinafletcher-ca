@@ -78,6 +78,7 @@ div.gallery {
     border: 2px solid white;
     float: left;
     width: 180px;
+    height: 200px;
 }
 
 div.gallery:hover {
@@ -100,6 +101,7 @@ div.desc {
 div.column {
     float: left;
     width: 30%;
+    height: 350px;
     font-family: verdana;
     font-size: 15px;
     color: white;
