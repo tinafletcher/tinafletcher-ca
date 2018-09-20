@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/images/favicon.png" rel="icon">
+    <title>Why I Prefer Good Testing Over Excellent Testing - Part 7</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114624248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114624248-1');
+    </script>
+
+</head>
+<body>
+  <script type="text/javascript">
+    if (top !== self){ //in an iframe
+      //don't display the menu
+    }
+    else{ //not in an iframe
+      //display menu, in the case where someone is viewing an article in its own window
+      document.write("<ul class='menu'><li class='menu'><a class='menu' href=index.html>Home</a></li><li class='menu'><a class='menu' href=speaking.html>Speaking</a></li><li class='menu'><a class='menu' href=writing.html>Writing</a></li><li class='menu'><a class='menu' href=reading.html>Reading</a></li><li class='menu'><a class='menu' href=doing.html>Doing</a></li><li class='menu'><a class='menu' href=about.html>About</a></li></ul>");
+    }
+  </script>
+  <div class="article">
+    <h5>SEPTEMBER 20, 2018</h5>
+    <h2>Why I Prefer Good Testing Over Excellent Testing – Part 7</h2>
+    <p>This is the seventh (and final) article in a series that expands on a talk I've given called "Why I Prefer Good Testing Over Excellent Testing".</p>
+    <h4>Summary of Story Time</h4>
+    <p>In the past 5 articles, I've shared stories about defects I missed that I wouldn't have found with all the time in the world, and cases where I was saved by good monitoring and roll-back strategies. To summarize the key lessons I learned:</p>
+    <ul>
+    <li>You don't know what you don't know</li>
+    <li>What's true today could change tomorrow</li>
+    <li>Things out of your control can impact you</li>
+    <li>"Working fine" does not necessarily mean there are no problems</li>
+    <li>Having failure handling strategies in place allows clear thinking during emergencies</li>
+    </ul>
+    <p>Ultimately, doing really excellent testing before releasing our work would not have helped in any of the situations I described.</p>
+
+    <h4>How do I make "good testing" work for me?</h4>
+    <p>So hopefully by now you’re thinking, this all sounds great, but how would I get started doing this in my own team? Well, the first step (not surprisingly) is to do good testing.</p>
+
+    <h5>1. Do Good Testing</h5>
+    <ul>
+    <li>Do: test until you feel pretty confident</li>
+    <li>Do: focus on things that would be hard to detect using automated monitoring (e.g. UI testing? business logic calculations? etc)</li>
+    <li>Skip: tests that feel so artificial that they're probably not telling you mch about what might happen in the real world</li>
+    <li>Skip: tests that are so expensive or time consuming to set up that they're hard to justify doing</li>
+    <li>Skip: tests where failures would likely only uncover very low priority defects</li>
+    </ul>
+
+    <p>Then, instead of continuing to test further, invest the rest of your time in planning for failure. Here are some questions you could ask yourself to get started.<p>
+
+    <h5>2. Plan For Failure</h5>
+    <ul>
+    <li>Roll out and roll back
+    	<ul>
+    	<li>Is there a way to roll out your changes in stages? (e.g. to subsets of users, or while keeping older functionality around until you’re sure the newer version works properly, like I described with our Broadcast Event Service)</li>
+    	<li>Do you know how you’d quickly roll back to an earlier version if you needed to? (e.g. using a feature flag, or maybe temporarily redirecting traffic back to some older servers)</li>
+    	</ul>
+    </li>
+    <li>Detecting issues
+    	<ul>
+    	<li>What information can you collect that will signal something is going wrong? (e.g. could be cost monitoring, like with our off by 10,000 error, or maybe it’s traffic volume, CPU or memory usage, specific words appearing in a log file, etc)</li>
+    	<li>How do you want to be notified when a problem is detected? (e.g. use a service like Amazon Cloudwatch to send you or your team messages, maybe you have a dashboard showing key metrics that you display on a big screen in your team’s area, etc)</li>
+    	<li>Who needs to take action when there is an issue? (e.g. maybe you have an on-call rotation, or maybe the issues you’re monitoring for are non-critical and you can review alerts the next day as part of standup, etc)</li>
+    	</ul>
+    </li>
+    <li>Responding to issues
+    	<ul>
+    	<li>What are some good first steps to take when an issue comes in? It can be useful to have these recorded somewhere, since this can help to quickly rule out false alarms or identify re-occurring issues that already have a defined resolution plan</li>
+    	<li>Who else needs to be kept in the loop while issues are being investigated, and what kind of information do they need?</li>
+    	<li>This is an important one, since it can potentially save you a lot of time, or sleep if you’re doing a 24hr on-call shift! Can you implement any extra resiliency or self-healing for any aspects of your product? (e.g. for the Broadcast Event Service, before alerting on a failed outgoing message, we implemented a single retry – so we only get alerted if multiple attempts in a row fail)</li>
+    	</ul>
+    </li>
+    </ul>
+
+    <p>These are just a few suggestions for brainstorming your failure planning - there are lots more things you could consider and ask about, but this list should at least be a good place to get started.</p>
+
+    <h4>What does all this mean for me and my team?</h4>
+    <p>So, let’s say you’ve decided to try “good testing” in combination with detailed failure planning. How will this change the way you and your team operate?</p>
+
+    <h5>Changes in Focus</h5>
+    <ul>
+    <li>Both devs and testers think about observability up front</li>
+    <li>Use time not spent on last mile of testing to prep for failure handling</li>
+    <li>Don't forget to test your monitoring!</li>
+    </ul>
+
+    <h5>Changes in Expectations</h5>
+    <ul>
+    <li>Maybe you'll release more bugs (since you will no longer be testing all corner cases you can think of)</li>
+    <li>You'll probably NOTICE more bugs (possibly just because you now have more visibility into what's actually going on)</li>
+    <li>You might be on call (good motivation to invest in reliability and self healing!)</li>
+    </ul>
+
+    <h5>Changes in Success Criteria</h5>
+    <ul>
+    <li>Instead of aiming for fewer escaped defects, aim for ability to detect and resolve issues more quickly</li>
+    <li>Instead of "why did we miss this defect?", consider "could this defect be automatically resolved next time?"</li>
+    </ul>
+
+    <h4>Closing Thoughts</h4>
+    <p>In closing, if we boil this entire series of articles down to just one sentence, the key piece of advice I am offering is: <b>it's a good idea to be ready to handle failure, because in all likelihood you're not going to find all the bugs anyway :)</b></p>
+
+
+    <p><img src="resources/images/heart.png" width=20 height=20>, TF</p>
+  </div>
+
+</body>
+</html>
